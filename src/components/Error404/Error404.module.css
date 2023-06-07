@@ -1,0 +1,26 @@
+.button404 {
+    background-color: #129762;
+    color: #0c0c0c;
+    transform: translateY(-7px);
+    border-radius: 20px;
+    font-weight: 720;
+    font-size: 30px;
+    box-shadow: 6px 4px 10px #0c0c0c;
+}
+
+.button404:hover{
+    transform: translateY(-1px);
+}
+
+.E404 {
+    margin-top: 10px;
+    background-image: url('../Asets/404-error-not-found-1.png');
+    background-color: rgba(65, 62, 62, 0.801);
+    background-position: center center;
+    background-size: contain;
+    width: 100vw;
+    height: 99vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* border: solid rgb(7, 7, 0) 3px; */
+}

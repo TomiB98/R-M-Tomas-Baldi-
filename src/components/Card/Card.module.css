@@ -1,0 +1,177 @@
+.cards {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+
+.cards .front {
+  transform: perspective(600px) rotateY(0deg);
+  /* box-shadow: 8px 5px 15px rgb(100, 98, 98); */
+  box-shadow: 8px 5px 20px #35ff71;
+  /* box-shadow: 8px 5px 15px #050007; */
+  /* background-color: rgb(52, 230, 52); */
+  /* background-color: rgb(69, 4, 131); */
+  color: black;
+  font-size: 20px;
+  font-family: fantasy;
+  font-size: 150%;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  /* transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #fff; */
+  /* border: solid rgb(7, 7, 0) 1.5px; */
+  border: solid rgb(7, 7, 0) 3px;
+
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 35px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.cards .front img {
+  width: 298px;
+  height: 290px;
+ 
+  object-fit: cover;
+  overflow: hidden;
+  
+}
+
+.cards .back {
+  transform: perspective(600px) rotateY(180deg);
+  /* background: rgb(3, 35, 54); */
+  background-image: url('../Asets/rick-and-morty-portal-wallpaper-2-scaled.jpg');
+  background-position: center center;
+  background-size: cover;
+  padding: 15px;
+  /* color: #f3f3f3; */
+  color: black;
+  font-family: fantasy;
+  font-size: 150%;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  display: auto;
+  text-align: center;
+  box-shadow: 8px 5px 15px #04fa4e;
+  /* box-shadow: 8px 5px 15px #050007; */
+  /* box-shadow: 8px 5px 15px rgb(100, 98, 98); */
+
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 35px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.cards:hover .front{
+  transform: perspective(200px) rotateY(180deg)
+}
+.cards:hover .back{
+  transform: perspective(200px) rotateY(360deg)
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonInfo {
+  width: 78px;
+  height: 20px;
+  border-radius: 8px;
+  /* background-color: rgb(128, 2, 2); */
+  /* background: rgb(28,1,3); */
+  /* background: linear-gradient(90deg, rgba(49,60,213,1) 8%, rgba(30,52,171,1) 25%, rgba(15,18,140,1) 50%, rgba(13,22,115,1) 75%, rgba(17,26,101,1) 92%); */
+  background-color: #03ac68;
+  text-transform: uppercase;
+  font-size: 10px;
+  /* border: solid rgb(7, 7, 0) 1px; */
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgb(8, 8, 8);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.buttonInfo:hover {
+  width: 100px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: #19f09a;
+  align-items: center;
+}
+
+.buttonDelete {
+  width: 55px;
+  height: 20px;
+  border-radius: 8px;
+  background-color: rgb(128, 2, 2);
+  /* background: rgb(28,1,3); */
+  /* background: linear-gradient(90deg, rgba(28,1,3,1) 2%, rgba(77,3,6,1) 22%, rgba(122,5,11,1) 41%, rgba(162,5,11,1) 66%, rgba(213,8,17,1) 89%); */
+  /* border: solid rgb(7, 7, 0) 1px; */
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgb(8, 8, 8);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.buttonDelete:hover {
+  width: 80px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+}
+
+.buttonFav {
+  width: 40px;
+  height: 20px;
+  border-radius: 8px;
+  background-color: rgb(250, 5, 5);
+  font-size: 10px;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgb(8, 8, 8);
+  cursor: pointer;
+  transition-duration: .3s;
+  overflow: hidden;
+  position: relative;
+
+  transform: translateY(2px);
+}
+
+/* .buttonFav:hover {
+  width: 70px;
+  border-radius: 50px;
+  transition-duration: .3s;
+  background-color: rgb(255, 69, 69);
+  align-items: center;
+} */
+
+.buttonFav:hover{
+  transform: translateY(-6px);
+}

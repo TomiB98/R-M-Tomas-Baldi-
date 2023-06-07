@@ -1,38 +1,123 @@
+/* .App {
+  text-align: center;
+} */
+
 .App {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  /* border: solid rgb(7, 7, 0) 1px; */
+  margin: auto;
+  /* padding: 11px; */
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* background-image: url('../src/components/Asets/27346.png'); */
+  background-image: url('../src/components/Asets/rick\ and\ morty\ fondo\ 1.jpg');
+  background-size: cover;
+  /* width: 100%; */
+  /* background-position: center center; */
+  /* text-align: center; */
+
+  /* background-size: cover; */
+  /* width: 100vw;
+   height: 100vh; */
+  width: 98vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* .App {
+   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cards {
+   position: relative;
+   width: 300px;
+   height: 350px;
+   margin: 20px;
+ }
+ 
+ .cards .face {
+   position: absolute;
+   width: 90%;
+   height: 100%;
+   backface-visibility: hidden;
+   border-radius: 35px;
+   overflow: hidden;
+   transition: .5s;
+
+ }
+ .cards .front {
+   transform: perspective(600px) rotateY(0deg);
+   box-shadow: 10px 5px 20px #050007;
+   background-color: rgb(52, 230, 52);
+   
+ }
+ 
+ .cards .front img {
+   width: 298px;
+   height: 290px;
+  
+   object-fit: cover;
+   overflow: hidden;
+   
+ }
+ 
+ .cards .back .button{
+   color: rgb(243, 242, 242);
+   background-color: #fc0303;
+   box-shadow: 2.5px 0.5px 5px #f4f1f5;
+   border-radius: 35px;
+   width: 22%;
+ }
+ 
+ .cards .back {
+   transform: perspective(600px) rotateY(180deg);
+   background: url('./components/Asets/Estrellas.png');
+   background-size: cover;
+   padding: 15px;
+   color: rgb(14, 77, 100);
+   font-size: 20px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   text-align: center;
+   box-shadow: 10px 5px 20px #050007;
+ }
+ 
+ .cards:hover .front{
+   transform: perspective(200px) rotateY(180deg)
+ }
+ .cards:hover .back{
+   transform: perspective(200px) rotateY(360deg)
+ }
+
+ .App{
+   display: flex;
+   flex-direction: row;
+   justify-content: center; 
+   flex-wrap: wrap;
+   padding: 20px;
+   border: solid rgb(7, 7, 0) 1px;
+   margin:auto;
+   padding: 11px;
+   text-align:center;
 }
 
-.App-link {
-  color: #61dafb;
-}
+body{
+   background-image: url('../src/components/Asets/27346.png');
+   background-size: cover;
+   width: 100%;
+   
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
+background-position: center center;
+
+} */

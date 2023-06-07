@@ -1,0 +1,43 @@
+.me {
+  margin-top: 80px;
+  position: relative;
+  width: 350px;
+  height: 400px;
+  /* margin: 20px; */
+  /* width: 200px;
+  height: 250px; */
+  background-image: url('../Asets/rick-and-morty-portal-wallpaper-2-scaled.jpg');
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  position: relative;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform .5s;
+  font-weight: 600;
+  box-shadow: 8px 5px 15px #04fa4e;
+  font-size: 25px;
+}
+
+.me:hover {
+  transform: translateZ(10px) rotateX(20deg) rotateY(20deg);
+}
+
+/* .me_title {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    transition: transform .5s;
+    font: 700 1.5rem monospace;
+    text-shadow: -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+} */
+
+/* .me:hover .me_title {
+    transform: translateZ(50px);
+} */

@@ -1,0 +1,50 @@
+.loginBack {
+    background-image: url('../Asets/Estrellas.png');
+    background-position: center center;
+    background-size: cover;
+    width: 25vw;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    border-radius: 35px;
+    margin-top: 95px;
+    /* box-shadow: #3FFF00; */
+    box-shadow: 8px 5px 15px #04fa4e;
+}
+
+.login {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.loginButton {
+    width: 100px;
+    /* background: radial-gradient(circle, rgba(237,254,71,1) 0%, rgba(9,251,9,1) 100%); */
+    background: radial-gradient(circle, rgba(9, 251, 9, 1) 0%, rgba(237, 254, 71, 1) 100%);
+    border-radius: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 1000;
+}
+
+.search {
+    border-radius: 5px;
+}
+
+.h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    /* color: #3FFF00; */
+    color: #3FFF00;
+    /* text-shadow: 5px 5px 10px #FFFF00; */
+    text-shadow: 5px 5px 10px rgba(237, 254, 71, 1);
+    /* text-decoration: solid rgb(248, 3, 3) 200px; */
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: aqua;
+}
+
+.searchBars {
+    color: aliceblue;
+}

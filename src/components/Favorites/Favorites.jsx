@@ -8,7 +8,7 @@ import { useState } from "react";
 //import { connect } from "react-redux";
 
 
-const Favorites = ({ onClose }) => { //{ myFavorites } 
+const Favorites = ({onClose}) => { //{ myFavorites } 
 
     const [aux, setAux] = useState(false)
 
@@ -35,12 +35,12 @@ const Favorites = ({ onClose }) => { //{ myFavorites }
                     <option value="D">Descendente</option>
                 </select>
                 <select className={style.filtersBox} onChange={handleFilter}>
-                    <option>ShowAll</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Genderless">Genderless</option>
                     <option value="unknown">Unknown</option>
                 </select>
+                <button className={style.showAll} onClick={handleOrder} value="A">ShowAll</button>
 
             </div>
             <div className={style.conteinerFavs}>
@@ -56,7 +56,6 @@ const Favorites = ({ onClose }) => { //{ myFavorites }
                                 origin={origin}
                                 image={image}
                                 onClose={onClose}
-
                             />
                         )
                     })

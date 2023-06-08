@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export const addFav = (character) =>{
     return {type: 'ADD_FAV',payload: character}
 };
@@ -12,4 +14,11 @@ export const filterCards = (gender) =>{
 
 export const orderCards = (order) =>{
     return {type: 'ORDER',payload: order}
+};
+//
+export const getCardDetail =(id) =>{
+    return async function(dispatch){
+        const response = await axios(`https://rickandmortyapi.com/api/character/${id}`)
+        return dispatch({type: 'GET_CARD_DETAIL', payload: response.data})
+    }
 };

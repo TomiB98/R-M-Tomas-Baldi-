@@ -1,23 +1,34 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
+//import axios from "axios";
+import { useEffect } from "react"; //useState,
 import { useParams } from "react-router-dom";
 import style from './Detail.module.css'
 import { Link } from "react-router-dom";
+//
+import { useDispatch, useSelector } from 'react-redux'
+import { getCardDetail } from "../../Redux/Actions";
 
 const Detail = () => {
     const { id } = useParams();
-    const [character, setCharacter] = useState({});
+    //
+    const character = useSelector(state => state.characterDetail)
+    const dispatch = useDispatch()
 
     useEffect(() => {
-        axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-            if (data.name) {
-                setCharacter(data);
-            } else {
-                window.alert('No hay personajes con ese ID');
-            }
-        });
-        return setCharacter({});
-    }, [id]);
+        dispatch(getCardDetail(id))
+      }, [dispatch, id])
+
+    // const [character, setCharacter] = useState({});
+
+    // useEffect(() => {
+    //     axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+    //         if (data.name) {
+    //             setCharacter(data);
+    //         } else {
+    //             window.alert('No hay personajes con ese ID');
+    //         }
+    //     });
+    //     return setCharacter({});
+    // }, [id]);
 
     return (
         <div className={style.detail}>

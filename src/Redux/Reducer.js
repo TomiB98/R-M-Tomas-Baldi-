@@ -1,4 +1,5 @@
 const initialState = {
+    characterDetail: {},
     myFavorites: [],
     allCharactersFav: []
 };
@@ -26,9 +27,15 @@ const reducer = (state = initialState, action) => {
             const allCharactersFavCopy = [...state.allCharactersFav]
             return {
                 ...state,
-                myFavorites: 
-                action.payload === 'A' 
-                ? allCharactersFavCopy.sort((a, b)=> a.id - b.id) : allCharactersFavCopy.sort((a, b)=> b.id - a.id)
+                myFavorites:
+                    action.payload === 'A'
+                        ? allCharactersFavCopy.sort((a, b) => a.id - b.id) : allCharactersFavCopy.sort((a, b) => b.id - a.id)
+            }
+        //
+        case 'GET_CARD_DETAIL':
+            return {
+                ...state,
+                characterDetail: action.payload
             }
         default:
             return { ...state }

@@ -12,8 +12,7 @@ import Favorites from './components/Favorites/Favorites';
 
 import { useDispatch } from 'react-redux';
 import { removeFav } from './Redux/Actions';
-const EMAIL = 'tomasbaldi@gmail.com';
-const PASSWORD = 'tomas98';
+
 
 function App() {
    const dispatch = useDispatch();
@@ -24,41 +23,52 @@ function App() {
    const navigate = useNavigate();
    const [access, setAccess] = useState(false);
 
-   function login(userData) {
-      if (userData.password === PASSWORD && userData.email === EMAIL) {
-         setAccess(true);
-         navigate('/home');
+   async function login(userData) {
+      try {
+         const { email, password } = userData;
+         const URL = 'http://localhost:3001/rickandmorty/login/';
+         const { data } = await axios(URL + `?email=${email}&password=${password}`)
+         const { access } = data;
+         setAccess(access);
+         access && navigate('/home');
+         
+      } catch (error) {
+         console.log(error.message)
       }
    }
 
    function logout() {
-      navigate('/')
       setAccess(false)
+      navigate('/')
    }
 
    useEffect(() => {
       !access && navigate('/');
    }, [navigate, access]);
 
-   function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-         console.log(data)
+   async function onSearch(id) {
+      try {
+         const {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
          if (characters.some(char => char.id === data.id)) {
-            window.alert('¡El personaje ya fue cargado!');
+            alert('¡El personaje ya fue cargado!');
          }
          else if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            window.alert('¡No hay personajes con este ID!');
+         } 
+         else {
+            alert('¡No hay personajes con este ID!');
          }
-      });
+
+      } catch (error) {
+         console.log(error)
+      }
    }
 
    const randomSearch = () => {
       let min = 1
       let max = 826
       let randomId = Math.floor((Math.random() * (max - min + 1)) + min)
-      axios(`https://rickandmortyapi.com/api/character/${randomId}`).then(({ data }) => {
+      axios(`http://localhost:3001/rickandmorty/character/${randomId}`).then(({ data }) => {
          console.log(data)
          if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
@@ -86,7 +96,7 @@ function App() {
             <Route path='/home' element={<Cards characters={characters} onClose={onClose} />} />
             <Route path='/about' element={<About />} />
             <Route path='/detail/:id' element={<Detail />} />
-            <Route path='/favorites' element={<Favorites onClose={onClose}/>} />
+            <Route path='/favorites' element={<Favorites />} />
             <Route path='*' element={<Error404 />} />
          </Routes>
       </div>
